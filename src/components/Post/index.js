@@ -49,21 +49,15 @@ const Post = props => {
       <View style={styles.topContainer}>
         <View style={styles.box} />
         <View style={styles.boxContent}>
-          {/* <View
-            style={{
-              justifyContent: 'center',
-              marginRight: '7%',
-            }}>
-            <Image
-              source={{
-                uri: post.user.user_profile,
-                height: 50,
-                width: 50,
-              }}
-              style={{borderRadius: 25}}
-            />
-          </View> */}
-          <View style={{justifyContent: 'center'}}>
+          <Image
+            source={{
+              uri: post.user.user_profile,
+              height: 50,
+              width: 50,
+            }}
+            style={{borderRadius: 25}}
+          />
+          <View style={{justifyContent: 'center', marginStart: 10}}>
             <Text style={styles.title}>{post.user.user_name}</Text>
             <Text style={styles.desc}>{post.user.user_bio}</Text>
           </View>
@@ -105,7 +99,7 @@ const Post = props => {
           style={{
             flex: 1,
             alignItems: 'flex-end',
-            marginTop: 30,
+            marginTop: 25,
             marginRight: 8,
           }}>
           <Image
