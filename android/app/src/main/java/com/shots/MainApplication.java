@@ -10,8 +10,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+//camera and video
 import com.brentvatne.react.ReactVideoPackage;
-
+import org.reactnative.camera.RNCameraPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 

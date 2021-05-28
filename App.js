@@ -52,7 +52,7 @@ const App = () => {
       );
 
       if (getUserResponse.data.getUser) {
-        alert('User already exists in database');
+        console.log('User already exists in database');
         return;
       }
 
