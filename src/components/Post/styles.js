@@ -47,6 +47,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '700',
   },
+  song: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: '700',
+    fontStyle: 'italic',
+    marginLeft: 10,
+  },
   desc: {
     color: 'white',
     fontSize: 16,

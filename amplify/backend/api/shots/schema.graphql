@@ -20,7 +20,7 @@ type Post @model @key(name: "byUser", fields: ["userID"]) {
   user: User @connection(fields: ["userID"])
 
   songID: ID!
-  song: User @connection(fields: ["songID"])
+  song: Song @connection(fields: ["songID"])
 }
 
 type Song @model {
