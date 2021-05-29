@@ -146,3 +146,18 @@ export const listSongs = /* GraphQL */ `
     }
   }
 `;
+export const listPostByUser = /* GraphQL */ `
+  query getUserPost(
+    $filter: ModelPostFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        desciption
+        video_url
+      }
+    }
+  }
+`;

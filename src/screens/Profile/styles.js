@@ -4,8 +4,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundColor: 'black',
   },
   textInput: {
     margin: 10,
@@ -28,6 +26,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  topContainer: {
+    height: '40%',
+    paddingTop: 30,
+    paddingHorizontal: 30,
+    borderBottomWidth: 2,
+    borderBottomColor: 'gray',
+    marginBottom: 10,
+  },
+  bottomContainer: {
+    height: '60%',
+    marginLeft: 8,
   },
 });
 

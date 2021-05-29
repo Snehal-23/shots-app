@@ -8,7 +8,6 @@ import {useNavigation} from '@react-navigation/native';
 const Camera = () => {
   const [isRecording, setIsRecording] = useState(false);
   const camera = useRef();
-
   const navigation = useNavigation();
 
   const onRecord = async () => {

@@ -10,6 +10,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from '../screens/Home';
 import Camera from '../screens/Camera';
 import CreatePost from '../screens/CreatePost';
+import Profile from '../screens/Profile';
+import Search from '../screens/Search';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,7 +37,7 @@ const tabNav = () => {
       />
       <Tab.Screen
         name={'Search'}
-        component={Home}
+        component={Search}
         options={{
           tabBarIcon: ({color}) => (
             <AntDesign name={'search1'} size={25} color={color} />
@@ -48,14 +50,14 @@ const tabNav = () => {
         component={Camera}
         options={{
           tabBarIcon: ({}) => (
-            <AntDesign name={'search1'} size={25} color={color} />
+            <Ionicons name={'add-circle'} size={30} color={color} />
           ),
           tabBarLabel: () => null,
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name={'Inbox'}
-        component={CreatePost}
+        component={Home}
         options={{
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons
@@ -66,10 +68,10 @@ const tabNav = () => {
           ),
           tabBarLabel: () => null,
         }}
-      />
+      /> */}
       <Tab.Screen
         name={'Profile'}
-        component={Home}
+        component={Profile}
         options={{
           tabBarIcon: ({color}) => (
             <Ionicons name={'person-outline'} size={25} color={color} />

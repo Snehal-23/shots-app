@@ -1,6 +1,6 @@
 {
     "identityPoolName": "shots3c494631_identitypool_3c494631",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "shots3c494631",
     "userPoolName": "shots3c494631_userpool_3c494631",
     "autoVerifiedAttributes": [

@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Video, {LoadError} from 'react-native-video';
+import {Storage} from 'aws-amplify';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -18,6 +19,7 @@ const Post = props => {
   const [post, setPost] = useState(props.post);
   const [paused, setPaused] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+  const [videoUri, setVideoUri] = useState();
   const onPlayPause = () => {
     setPaused(!paused);
   };
@@ -29,20 +31,31 @@ const Post = props => {
     });
     setIsLiked(!isLiked);
   };
+  const getVideoUri = async () => {
+    if (post.video_url.startsWith('http')) {
+      setVideoUri(post.video_url);
+      return;
+    } else {
+      setVideoUri(await Storage.get(post.video_url));
+    }
+  };
+  useEffect(() => {
+    getVideoUri();
+  }, []);
+
   return (
     <View style={styles.container}>
       <TouchableWithoutFeedback onPress={onPlayPause}>
         <Video
           // source={require('../../assets/big_buck_bunny.mp4')}
-          source={{
-            uri: post.video_url,
-          }}
+          source={{uri: videoUri}}
           style={styles.video}
           resizeMode={'cover'}
           onError={(e: LoadError) => console.log(e)}
           repeat={true}
           // controls={true}
           paused={paused}
+          playInBackground={false}
           fullscreenAutorotate={true}
         />
       </TouchableWithoutFeedback>
