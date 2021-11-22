@@ -4,7 +4,7 @@ A React native app with Graphql API and Aws Amplify
 Included feature:
 1. Authentication using Aws amplify
 2. You can take video from your camera and post it on app
-3. On the homefeed, all the videos in scrollable present format
+3. On the homefeed, all the videos present in scrollable format
 4. Search functionality to search users
 
 <a href="https://ibb.co/Kjy0VkC"><img src="https://i.ibb.co/HDgFGsm/Screenshot-2021-05-29-191604.png" alt="Screenshot-2021-05-29-191604" border="0" height=400 width=200></a>
